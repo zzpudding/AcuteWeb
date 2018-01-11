@@ -1,0 +1,141 @@
+<?php
+$siteKey = '6Lciyz8UAAAAALUwQ6ihfWitUNJ_KhHH1Um0OH4Q';
+$lang = 'en';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel='stylesheet ' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    <script  src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script  src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/foot.css">
+
+    <!-- Logo in website tab/bookmark -->
+    <link rel="bookmark" type="image/x-icon" href="images/favicon.ico"/>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" href="images/favicon.ico">
+    <!-- Logo in website tab/bookmark -->
+    
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+</head>
+
+
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-default topnav" role="navigation">
+    <div class="container topnav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#target-menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="topnav navbar-brand">
+            </div>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="target-menu">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="index.html " >Home</a >
+                </li>
+                <li >
+                    <a  href="company.html">Company</a >
+                </li>
+                <li class="active">
+                    <a href="contact.html">Contact</a >
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<!-- /.Navigation -->
+
+
+    <!--picture area-->
+    <div >
+        <img class="picture-area" src="images/contact.png">
+    </div>
+
+    <!--welcome area-->             
+    <div class="header" >
+        <h >GET IN TOUCH</h>
+    </div>
+    <div class="information">
+        <p >We’re happy to hear from you. Contact us today to learn more about our business and how you can benefit from working with us. </p>
+    </div>
+    <!--email writing area-->
+
+	 <div class="container-email">
+	  <form action="action_page.php" method="post">
+	    <div class="row">
+	      <div class="col">
+	        <input type="text" placeholder="Name*:" name="name" pattern="^[a-z ,.'-]+$" title="Firstname and lastname should only contain letters. e.g. John Smith" required>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col">
+
+	        <input type="text" placeholder="Email address*:" name="email"  title="Email should follow certain format. e.g. someone@example.com" required>
+	      </div>
+	    </div>
+		<div class="row">
+	      <div class="col">
+	        <input type="text" id="subject" name="subject" placeholder="Subject*:" required>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col">
+	        <textarea id="message" name="message" placeholder="Write message:" style="height:200px" required></textarea>
+	      </div>
+	    </div>
+<!-- 	    <div class="validation-area">
+	    	<div class="g-recaptcha" data-sitekey="6Lciyz8UAAAAALUwQ6ihfWitUNJ_KhHH1Um0OH4Q"></div>
+	    </div>
+        pattern="^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+"
+         -->
+	    <div class="row">
+            <div class="col">
+	          <input type="submit" value="Submit">
+            </div>
+	    </div>
+	  </form>
+	</div>
+
+
+
+<footer>
+    <div class="items">
+       <div class="container">
+            <div class="row" >
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <a href="about.html">About</a>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <a >Twitter</a>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <a >Facebook</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="" >
+        <p class="copyright">Copyright © 2018 Acute Software Engineering Company. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
