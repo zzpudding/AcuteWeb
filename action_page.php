@@ -33,7 +33,6 @@ try {
     //Recipients
     $mail->setFrom('1003353398@qq.com','Mailer');
     $mail->addAddress('yujia.zhang@stud.fh-luebeck.de', 'Joe User');     // Add a recipient
-    $mail->addReplyTo('qiang.ma@stud.fh-luebeck.de', 'Information');
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
