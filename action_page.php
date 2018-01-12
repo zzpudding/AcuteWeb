@@ -38,7 +38,7 @@
            $mail->Body    = "Sender Email address is: ". $Email . "<br>" . "Sender name is: ".$Name. "<br>" ."Sender Message is: ". $Message;
 
            $mail->send();
-           echo 'Message has been sent';
+//           echo 'Message has been sent';
        } catch (Exception $e) {
            echo 'Message could not be sent.';
            echo 'Mailer Error: ' . $mail->ErrorInfo;
