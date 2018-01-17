@@ -803,11 +803,11 @@ class PHPMailer
                 break;
             case 'html':
                 //Cleans up output a bit for a better looking, HTML-safe output
-                echo htmlentities(
-                    preg_replace('/[\r\n]+/', '', $str),
-                    ENT_QUOTES,
-                    'UTF-8'
-                ), "<br>\n";
+//                echo htmlentities(
+//                    preg_replace('/[\r\n]+/', '', $str),
+//                    ENT_QUOTES,
+//                    'UTF-8'
+//                ), "<br>\n";
                 break;
             case 'echo':
             default:

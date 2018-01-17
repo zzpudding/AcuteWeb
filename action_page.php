@@ -1,15 +1,43 @@
 <?php
+
 $Name = $_POST['name'];
 $Email = $_POST['email'];
 $Subject = $_POST['subject'];
 $Message=$_POST['message'];
 
-//This is the part get the validation result from g-recapcha. If not a robot->return true
-function validation(){
-    return true;
+session_start();
+$_SESSION['Name']=$Name;
+$_SESSION['Email']=$Email;
+$_SESSION['Subject']=$Subject;
+$_SESSION['Message']=$Message;
+
+//This is the part validate g-recapcha. If not a robot->return true
+if(isset($_POST['Submit'])){
+    function CheckCaptcha($usrResponse){
+        $fields_string = '';
+        $fields = array(
+            'secret' => "6Lciyz8UAAAAAA1J17LeTFSDJ4-QYiutHURnwQ2i",
+            'response' => $usrResponse
+        );
+        foreach($fields as $key => $value)
+            $fields_string .= $key . '=' . $value . '&';
+            $fields_string = rtrim($fields_string,'&');
+
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL,'https://www.google.com/recaptcha/api/siteverify');
+            curl_setopt($ch,CURLOPT_POST,count($fields));
+            curl_setopt($ch,CURLOPT_POSTFIELDS,$fields_string);
+            curl_setopt($ch,CURLOPT_RETURNTRANSFER,True);
+
+            $res = curl_exec($ch);
+            curl_close($ch);
+            return json_decode($res,true);
+    }
 }
 
-if(validation() == true){
+$result = CheckCaptcha($_POST['g-recaptcha-response']);
+
+if($result['success']){
     // Import PHPMailer classes into the global namespace
     // These must be at the top of your script, not inside a function
     require 'PHPMailer.php';
@@ -43,7 +71,12 @@ if(validation() == true){
 //           echo 'Message has been sent';
     } catch (Exception $e) {
         echo "<script>alert('Message could not be sent. Please try again')</script>";
+        readfile("contact.html");
     }
+}else{
+    echo "<script>alert('Captcha failed. Please try again')</script>";
+    echo "<script> alert('ggg');history.go(-1);</script>";
 }
+
 ?>
 

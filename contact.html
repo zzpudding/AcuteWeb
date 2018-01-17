@@ -3,6 +3,7 @@ $siteKey = '6Lciyz8UAAAAALUwQ6ihfWitUNJ_KhHH1Um0OH4Q';
 $lang = 'en';
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,14 +91,14 @@ $lang = 'en';
         <!-- Name filling area. Must be filled and should meet the request of containing nothing but letters -->
         <div class="row">
             <div class="col">
-                <input type="text" placeholder="Name*:" name="name" pattern="^([a-zA-Z]+[,.]?[ ]?|[a-zA-Z]+['-]?)+$" title="Firstname and lastname should only contain letters. e.g. John Smith" required>
+                <input type="text" placeholder="Name*:" name="name" pattern="^([a-zA-Z]+[,.]?[ ]?|[a-zA-Z]+['-]?)+$"  title="Firstname and lastname should only contain letters. e.g. John Smith"  required>
             </div>
         </div>
         <!-- /.Name filling area -->
         <!-- Email address filling area. Must be filled and should meet the request pattern="^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+$"-->
         <div class="row">
             <div class="col">
-                <input type="text" placeholder="Email address*: " name="email"  pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$" title="Email should follow certain format. e.g. someone@example.com" required>
+                <input type="text" placeholder="Email address*: " name="email"  pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,8})$" title="Email should follow certain format. e.g. someone@example.com" required>
             </div>
         </div>
         <!-- /.Email filling area -->
@@ -115,15 +116,18 @@ $lang = 'en';
             </div>
         </div>
         <!-- /.Email message filling area -->
-        <!-- google recaptcha part. This part cannot be built due to the lack of a server.
-        <div class="validation-area">
-              <div class="g-recaptcha" data-sitekey="6Lciyz8UAAAAALUwQ6ihfWitUNJ_KhHH1Um0OH4Q"></div>
+        <!-- google recaptcha part. This part cannot be built due to the lack of a server.   -->
+        <div class="row">
+            <div class="col">
+                <div class="validation-area">
+                      <div class="g-recaptcha" data-sitekey="6Lciyz8UAAAAALUwQ6ihfWitUNJ_KhHH1Um0OH4Q"></div>
+                </div>
+            </div>
         </div>
-        -->
         <!-- Submit button -->
         <div class="row">
             <div class="col">
-                <input type="submit" value="Submit">
+                <input name="Submit" type="submit" value="Submit">
             </div>
         </div>
         <!-- /.Submit button -->
