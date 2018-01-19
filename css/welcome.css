@@ -102,18 +102,17 @@
 }
 
 .logo-animation{
+    left: 30%;
     opacity: 0;
     width: 40%;
     height:auto;
     position: relative;
-    -webkit-animation-name: logo; /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: zoomIn; /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
     -webkit-animation-fill-mode:forwards;/* Safari 4.0 - 8.0 */
-    -webkit-animation-direction:alternate;/* Safari 4.0 - 8.0 */
-    animation-name: logo;
+    animation-name: zoomIn;
     animation-duration: 2s;
     animation-delay:3s ;
-    animation-direction:alternate;
     animation-fill-mode:forwards;
 
 }
@@ -124,16 +123,26 @@
 }
 
 /* Safari 4.0 - 8.0 */
-@-webkit-keyframes logo {
-    0%   {opacity:0.2; left:0px; top:0px;}
-    75%   {opacity:0.5; left:60%; top:0px;}
-    100%  {opacity:1; left:30%; top:0px;}
+@-webkit-keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+
+    100% {
+        opacity: 1;
+    }
 
 }
 
 /* Standard syntax */
-@keyframes logo {
-    0%   {opacity:0.2; left:0px; top:0px;}
-    75%   {opacity:0.5; left:60%; top:0px;}
-    100%  {opacity:1; left:30%; top:0px;}
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

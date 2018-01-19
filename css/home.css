@@ -103,6 +103,16 @@ html {
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
+.dg-wrapper a.picture1{
+    background:url(../images/blank.png) no-repeat center;
+}
+.dg-wrapper a.picture2{
+    background:url(../images/blank1.png) no-repeat center;
+}
+.dg-wrapper a.more-pictures{
+    background:url(../images/blank2.png) no-repeat center;
+}
+
 @media(max-width:1300px) {
     .dg-container{
         margin-top:70px;
@@ -136,6 +146,8 @@ html {
         /*background: transparent url(../images/browser.png) no-repeat center;*/
         box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     }
+
+
     .dg-container nav{
         padding-top: 10px;
         width: 58px;
