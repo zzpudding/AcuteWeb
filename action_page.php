@@ -68,13 +68,15 @@ if($result['success']){
         $mail->send();
         readfile("contact.html");
         echo "<script>alert('Send Successfully!')</script>";
+//           echo 'Message has been sent';
     } catch (Exception $e) {
         echo "<script>alert('Message could not be sent. Please try again')</script>";
         readfile("contact.html");
     }
 }else{
-    echo "<script> alert('Captcha failed. Please try again');
-    history.go(-1);</script>";
+    echo "<script>history.go(-1);</script>";
+    echo "<script>alert('Captcha failed. Please try again')</script>";
+
 }
 
 ?>
