@@ -47,6 +47,7 @@ if($result['success']){
     $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
     try {
         //Server settings
+        //Username should be the email address that managing the sending email function
         $mail->SMTPDebug = 2;                                 // Enable verbose debug output
         $mail->isSMTP();                                      // Set mailer to use SMTP
         $mail->Host = 'smtp.qq.com';                          // Specify main and backup SMTP servers
@@ -57,6 +58,8 @@ if($result['success']){
         $mail->Port = 465;                                    // TCP port to connect to
 
         //Recipients
+        //setFrom should be same as Username
+        //addAddress should be Company address
         $mail->setFrom('1003353398@qq.com', $Name);
         $mail->addAddress('yujia.zhang@stud.fh-luebeck.de', 'Yujia Zhang');     // Add a recipient
         $mail->addReplyTo($Email, $Name);
