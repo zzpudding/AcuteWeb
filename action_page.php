@@ -9,7 +9,7 @@ $Message=$_POST['message'];
 function CheckCaptcha($usrResponse){
     $fields_string = '';
     $fields = array(
-        'secret' => "6Lciyz8UAAAAAA1J17LeTFSDJ4-QYiutHURnwQ2i",
+        'secret' => "your secert key",
         'response' => $usrResponse
     );
     foreach($fields as $key => $value)
@@ -42,16 +42,16 @@ if($result['success']){
         $mail->isSMTP();                                      // Set mailer to use SMTP
         $mail->Host = 'smtp.qq.com';                          // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
-        $mail->Username = '1003353398@qq.com';                // SMTP username
-        $mail->Password = 'seaezjqjgbjkbgaf';                 // SMTP password
+        $mail->Username = 'your email address';               // SMTP username e.g. 12345@qq.com
+        $mail->Password = 'password';                         // SMTP password
         $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
         $mail->Port = 465;                                    // TCP port to connect to
 
         //Recipients
         //setFrom should be same as Username
         //addAddress should be Company address
-        $mail->setFrom('1003353398@qq.com', $Name);
-        $mail->addAddress('yujia.zhang@stud.fh-luebeck.de', 'Yujia Zhang');     // Add a recipient
+        $mail->setFrom('your email address', $Name);
+        $mail->addAddress('recieve email address', 'User Name');     // Add a recipient
         $mail->addReplyTo($Email, $Name);
         //Content
         $mail->isHTML(true);                                  // Set email format to HTML
